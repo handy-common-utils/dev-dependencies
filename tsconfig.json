@@ -1,0 +1,21 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "strict": true,
+    "target": "es2017",
+    "declarationMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "composite": false,
+    "rootDirs": [
+      "src"
+    ],
+    "outDir": "dist"
+  }
+}
