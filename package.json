@@ -10,7 +10,7 @@
   "files": [
     "package.json",
     "tsconfig.*",
-    ".eslintrc",
+    ".eslintrc.*",
     ".nycrc.*",
     "dist"
   ],
