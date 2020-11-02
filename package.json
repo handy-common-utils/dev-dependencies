@@ -9,6 +9,7 @@
   },
   "files": [
     "package.json",
+    "tsconfig.json",
     "dist"
   ],
   "publishConfig": {
