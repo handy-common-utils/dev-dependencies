@@ -15,6 +15,12 @@
     "eqeqeq": ["error", "smart"],
     "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
     "object-curly-spacing": ["error", "always"],
+    "no-constant-condition": [
+      "error",
+      {
+        "checkLoops": false
+      }
+    ],
     "semi": ["error", "always"]
   }
 }
