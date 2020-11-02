@@ -9,7 +9,9 @@
   },
   "files": [
     "package.json",
-    "tsconfig.json",
+    "tsconfig.*",
+    ".eslintrc",
+    ".nycrc.*",
     "dist"
   ],
   "publishConfig": {
