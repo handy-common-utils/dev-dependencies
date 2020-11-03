@@ -1,24 +1,9 @@
 {
+  "extends": "./node_modules/@handy-common-utils/dev-utils/tsconfig.json",
   "include": [
     "src/**/*"
   ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ],
   "compilerOptions": {
-    "declaration": true,
-    "importHelpers": true,
-    "module": "commonjs",
-    "strict": true,
-    "target": "es2018",
-    "esModuleInterop": true,
-    "declarationMap": true,
-    "lib": ["es2018"],
-    "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "composite": false,
     "outDir": "dist"
   }
 }
