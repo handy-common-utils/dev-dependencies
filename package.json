@@ -37,6 +37,7 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.3",
+    "@types/node": "^10.17.44",
     "chai": "^4.2.0",
     "concat-md": "^0.3.5",
     "eslint": "^7.12.1",
