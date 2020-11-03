@@ -29,3 +29,9 @@ These scripts can be added to your `package.json`:
   "preversion": "generate-api-docs-and-update-readme && git add README.md"
 }
 ```
+
+If you have command line scripts, use this line for `prepare`:
+
+```json
+  "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
+```
