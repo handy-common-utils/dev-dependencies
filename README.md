@@ -4,10 +4,28 @@ This package contains dependencies that are common
 
 ## How to use
 
-Just add it as a dev dependency:
+First, just add it as a dev dependency:
 
 ```sh
 npm install -D @handy-common-utils/dev-dependencies
 ```
 
-That's all.
+For new project, you may want to copy these files from `./node_modules/@handy-common-utils/dev-dependencies/` into your project's root directory:
+
+* `tsconfig.json`
+* `.nycrc.yml`
+* `.eslintrc.yml`
+* `.eslintignore`
+
+Feel free to modify them for your needs.
+
+These scripts can be added to your `package.json`:
+
+```json
+"scripts": {
+  "pretest": "eslint . --ext .ts",
+  "test": "nyc mocha -r ts-node/register test/**/*spec.ts",
+  "prepare": "shx rm -rf dist && tsc",
+  "preversion": "generate-api-docs-and-update-readme && git add README.md"
+}
+```
