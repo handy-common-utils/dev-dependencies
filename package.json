@@ -38,6 +38,7 @@
     "@types/chai": "^4.2.16",
     "@types/mocha": "^8.2.2",
     "@types/node": "^10.17.58",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
     "chai": "^4.3.4",
     "concat-md": "^0.3.5",
     "eslint": "^7.25.0",
@@ -51,6 +52,5 @@
     "typedoc": "^0.20.36",
     "typedoc-plugin-markdown": "^3.7.1",
     "typescript": "^4.2.4"
-  },
-  "devDependencies": {}
+  }
 }
