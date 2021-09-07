@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies#readme",
   "dependencies": {
-    "@handy-common-utils/dev-utils": "^1.0.12",
+    "@handy-common-utils/dev-utils": "^1.0.13",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.16",
     "@types/mocha": "^8.2.2",
@@ -50,8 +50,6 @@
     "nyc": "^15.1.0",
     "shx": "^0.3.3",
     "ts-node": "^10.2.1",
-    "typedoc": "^0.21.9",
-    "typedoc-plugin-markdown": "^3.7.1",
     "typescript": "^4.4.2"
   }
 }
