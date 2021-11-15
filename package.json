@@ -1,6 +1,6 @@
 {
   "name": "@handy-common-utils/dev-dependencies",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "This package contains dependencies that are common",
   "bin": {},
   "scripts": {
