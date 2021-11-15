@@ -36,16 +36,17 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies#readme",
   "dependencies": {
-    "@handy-common-utils/dev-utils": "^1.0.21",
+    "@handy-common-utils/dev-utils": "^1.0.22",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.22",
     "@types/mocha": "^9.0.0",
     "@types/node": "^10.17.58",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
     "chai": "^4.3.4",
     "concat-md": "^0.3.5",
     "es-check": "^6.0.0",
-    "eslint": "^8.2.0",
+    "eslint": "^7.32.0",
     "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.2",
     "eslint-plugin-unicorn": "^38.0.1",
@@ -55,5 +56,8 @@
     "source-map-support": "^0.5.20",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/experimental-utils": "^5.3.1"
   }
 }
