@@ -1,12 +1,16 @@
 # @handy-common-utils/dev-dependencies
 
-This package contains dependencies that are common
+This package contains dependencies that are common. It can be used to accelarate the scaffolding of Typescript projects.
 
-## How to use
+## How to use (scenario of starting a new project from scratch)
+
+### 0. Initialise NPM
+
+This can be done through `npm init`.
 
 ### 1. Add as dependency
 
-First, just add it as a dev dependency:
+Just add it as a dev dependency:
 
 ```sh
 npm install -D @handy-common-utils/dev-dependencies
@@ -53,3 +57,8 @@ If you have command line scripts, you may want to use this line for `prepare`:
 ```json
   "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
 ```
+
+### 4. Start coding!
+
+By default your code goes to `src/` and your test cases go to `test/`, and compiled `.js` files go to `dist/`.
+Feel free to change the configurations if this convention does not suit you.
