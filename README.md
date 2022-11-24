@@ -4,26 +4,26 @@ This package contains dependencies that are common
 
 ## How to use
 
+### 1. Add as dependency
+
 First, just add it as a dev dependency:
 
 ```sh
 npm install -D @handy-common-utils/dev-dependencies
 ```
 
-For new project, you may want to copy these files from `./node_modules/@handy-common-utils/dev-dependencies/` into your project's root directory:
+### 2. Copy common configuration files
 
-* `tsconfig.json`
-* `.nycrc.yml`
-* `.eslintrc.yml`
-* `.eslintignore`
-
+For new project, you may want to copy some common configuration files for scaffolding 
 Here's the command line for copying those files:
 
 ```
-cp ./node_modules/@handy-common-utils/dev-dependencies/{tsconfig.json,.nycrc.yml,.eslintrc.yml} .
+cp ./node_modules/@handy-common-utils/dev-dependencies/{tsconfig.json,.nycrc.yml,.eslintrc.yml,.eslintignore,.mocharc.yml} .
 ```
 
 Feel free to modify them for your needs.
+
+### 3. Update `package.json`
 
 If you are developing for a NPM package, these scripts can be added to your `package.json`:
 
@@ -48,7 +48,7 @@ If you are developing a command line tool, these can be added to your `package.j
 },
 ```
 
-If you have command line scripts, use this line for `prepare`:
+If you have command line scripts, you may want to use this line for `prepare`:
 
 ```json
   "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
