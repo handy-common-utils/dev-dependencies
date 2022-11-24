@@ -8,11 +8,11 @@
     "prepare": ""
   },
   "files": [
-    "package.json",
     "tsconfig.*",
     ".eslintrc.*",
+    ".eslintignore",
     ".nycrc.*",
-    "dist"
+    ".mocharc.*"
   ],
   "publishConfig": {
     "access": "public"
