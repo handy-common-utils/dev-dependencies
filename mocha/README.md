@@ -82,6 +82,23 @@ And also these need to be added to `package.json`:
   }
 ```
 
+And these two files need to be added to `.husky` directory:
+
+File `.gitignore`:
+
+```
+-
+```
+
+File `pre-commit`:
+
+```shell
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
+```
+
 ### 4. Start coding!
 
 By default your code goes to `src/`, test cases go to `test/`, and compiled `.js` files go to `dist/`.
