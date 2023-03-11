@@ -10,9 +10,7 @@
   "files": [
     "tsconfig.*",
     ".eslintrc.*",
-    ".eslintignore",
-    ".nycrc.*",
-    ".mocharc.*"
+    ".eslintignore"
   ],
   "publishConfig": {
     "access": "public"
