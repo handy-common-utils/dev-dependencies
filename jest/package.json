@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/handy-common-utils/dev-dependencies/issues"
   },
-  "homepage": "https://github.com/handy-common-utils/dev-dependencies/jest#readme",
+  "homepage": "https://github.com/handy-common-utils/dev-dependencies/tree/master/jest#readme",
   "dependencies": {
     "@handy-common-utils/dev-dependencies-common": "1.0.0",
     "jest": "^29.5.0"

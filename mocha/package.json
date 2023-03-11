@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/handy-common-utils/dev-dependencies/issues"
   },
-  "homepage": "https://github.com/handy-common-utils/dev-dependencies/mocha#readme",
+  "homepage": "https://github.com/handy-common-utils/dev-dependencies/tree/master/mocha#readme",
   "dependencies": {
     "@handy-common-utils/dev-dependencies-common": "1.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",

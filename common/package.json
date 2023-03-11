@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/handy-common-utils/dev-dependencies/issues"
   },
-  "homepage": "https://github.com/handy-common-utils/dev-dependencies/common#readme",
+  "homepage": "https://github.com/handy-common-utils/dev-dependencies/common/tree/master/common#readme",
   "dependencies": {
     "@handy-common-utils/dev-utils": "^1.4.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
