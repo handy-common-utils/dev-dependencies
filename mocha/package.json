@@ -1,6 +1,6 @@
 {
   "name": "@handy-common-utils/dev-dependencies-mocha",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This package contains dependencies that are common, including mocha",
   "bin": {},
   "scripts": {
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies/mocha#readme",
   "dependencies": {
-    "@handy-common-utils/dev-dependencies-common": "1.0.0",
+    "@handy-common-utils/dev-dependencies-common": "1.0.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/chai": "^4.3.4",
     "@types/chai-as-promised": "^7.1.5",
