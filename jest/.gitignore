@@ -1,0 +1,5 @@
+.eslint*
+.mocharc*
+.nycrc*
+.prettier*
+tsconfig.*
