@@ -9,6 +9,13 @@
     "npm": "8.19.2"
   },
   "devDependencies": {
-    "@qiwi/semrel-toolkit": "^3.2.13"
+    "@qiwi/semrel-toolkit": "^3.2.13",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4"
+  },
+  "scripts": {
+    "format:all": "prettier --write --ignore-unknown .",
+    "prepare": "husky install"
   }
 }

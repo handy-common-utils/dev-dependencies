@@ -8,7 +8,6 @@ If you don't like `mocha`, try one of these instead:
 - [@handy-common-utils/dev-dependencies-common](../common) - Common dev dependencies without a testing framework.
 - [@handy-common-utils/dev-dependencies-jest](../jest) - Common dev dependencies, including @handy-common-utils/dev-dependencies-common, `jest`, etc.
 
-
 ## How start a new project with `@handy-common-utils/dev-dependencies-mocha`
 
 ### 0. Initialise NPM
@@ -25,7 +24,7 @@ npm install -D @handy-common-utils/dev-dependencies-mocha
 
 ### 2. Copy common configuration files
 
-For new projects, you may want to copy some common configuration files to start with. 
+For new projects, you may want to copy some common configuration files to start with.
 Here's the command line for copying those files:
 
 ```
