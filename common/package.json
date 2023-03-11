@@ -10,7 +10,8 @@
   "files": [
     "tsconfig.*",
     ".eslintrc.*",
-    ".eslintignore"
+    ".eslintignore",
+    ".prettier*"
   ],
   "publishConfig": {
     "access": "public"
