@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies/mocha#readme",
   "dependencies": {
-    "@handy-common-utils/dev-dependencies-common": "1.2.0",
+    "@handy-common-utils/dev-dependencies-common": "1.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
