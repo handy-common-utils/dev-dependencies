@@ -5,7 +5,7 @@
   "bin": {},
   "scripts": {
     "test": "",
-    "prepare": "shx cp ../tsconfig.* ../.eslintrc.* ../.eslintignore ."
+    "prepare": "shx cp ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ."
   },
   "files": [
     "tsconfig.*",
