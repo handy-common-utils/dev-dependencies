@@ -20,3 +20,6 @@ jobs:
             package-lock.json
       - run: npm ci
       - run: npx multi-semrel
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
