@@ -9,6 +9,7 @@
   },
   "files": [
     "tsconfig.*",
+    "jest.config.js",
     ".eslintrc.*",
     ".eslintignore",
     ".prettier*"

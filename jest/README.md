@@ -31,7 +31,7 @@ For new projects, you may want to copy some common configuration files to start 
 Here's the command line for copying those files:
 
 ```
-cp ./node_modules/@handy-common-utils/dev-dependencies-mocha/{tsconfig.json,.eslintrc.yml,.eslintignore,.prettierignore,.prettierrc.json} .
+cp ./node_modules/@handy-common-utils/dev-dependencies-mocha/{tsconfig.json,jest.config.js,.eslintrc.yml,.eslintignore,.prettierignore,.prettierrc.json} .
 ```
 
 Feel free to modify them to suit your needs.
