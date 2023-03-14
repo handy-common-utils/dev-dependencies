@@ -3,6 +3,9 @@
 This package contains dependencies that are common, including `mocha`, `chai` and `nyc`.
 It can be used to accelerate the scaffolding of Typescript projects.
 
+[![Version](https://img.shields.io/npm/v/@handy-common-utils/dev-dependencies-mocha.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-mocha)
+[![Downloads/week](https://img.shields.io/npm/dw/@handy-common-utils/dev-dependencies-mocha.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-mocha)
+
 If you don't like `mocha`, try one of these instead:
 
 - [@handy-common-utils/dev-dependencies-common](../common) - Common dev dependencies without a testing framework.

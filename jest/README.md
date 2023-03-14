@@ -3,6 +3,9 @@
 This package contains dependencies that are common, including `jest`.
 It can be used to accelerate the scaffolding of Typescript projects.
 
+[![Version](https://img.shields.io/npm/v/@handy-common-utils/dev-dependencies-jest.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-jest)
+[![Downloads/week](https://img.shields.io/npm/dw/@handy-common-utils/dev-dependencies-jest.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-jest)
+
 If you don't like `jest`, try one of these instead:
 
 - [@handy-common-utils/dev-dependencies-common](../common) - Common dev dependencies without a testing framework.
