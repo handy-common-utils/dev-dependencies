@@ -2,6 +2,7 @@
   "name": "@handy-common-utils/dev-dependencies",
   "workspaces": [
     "mocha",
+    "jest",
     "common"
   ],
   "volta": {
