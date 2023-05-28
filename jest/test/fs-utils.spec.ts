@@ -51,6 +51,7 @@ describe('Test project fs-utils', function () {
           const output = await $`npm test`;
           expect(output.exitCode).toEqual(1);
         } catch (error) {
+          console.log(error);
           const output = error as ProcessOutput;
           expect(output.exitCode).toEqual(1);
         }
