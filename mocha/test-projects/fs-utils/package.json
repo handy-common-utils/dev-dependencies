@@ -1,0 +1,50 @@
+{
+  "name": "@handy-common-utils/fs-utils",
+  "version": "1.1.0",
+  "description": "File system operations related utilities based on fs-extra",
+  "scripts": {
+    "pretest": "eslint . --ext .ts",
+    "test": "nyc mocha -r ts-node/register test/**/*spec.ts",
+    "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js && es-check",
+    "preversion": "generate-api-docs-and-update-readme && git add README.md"
+  },
+  "files": [
+    "package.json",
+    "dist"
+  ],
+  "main": "dist/fs-utils.js",
+  "types": "dist/fs-utils.d.ts",
+  "bin": {
+    "add-surrounding-in-file": "dist/bin/add-surrounding-in-file.js",
+    "replace-in-file": "dist/bin/replace-in-file.js",
+    "replace-in-files": "dist/bin/replace-in-files.js",
+    "replace-in-file-with-file-content": "dist/bin/replace-in-file-with-file-content.js"
+  },
+  "devDependencies": {
+    "@handy-common-utils/dev-dependencies-mocha": "../..",
+    "@types/tmp": "^0.2.0",
+    "tmp": "^0.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/handy-common-utils/fs-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/handy-common-utils/fs-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/handy-common-utils/fs-utils/issues"
+  },
+  "keywords": [
+    "fs",
+    "file",
+    "utils"
+  ],
+  "author": "James Hu",
+  "license": "Apache-2.0",
+  "volta": {
+    "node": "16.17.1",
+    "npm": "8.19.2"
+  }
+}
