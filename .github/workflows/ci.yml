@@ -15,6 +15,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
   test:
+    needs: setup
     runs-on: ubuntu-latest
 
     strategy:
