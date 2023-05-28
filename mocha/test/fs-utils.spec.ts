@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import 'zx/globals';
 
@@ -22,7 +23,13 @@ describe('Test project fs-utils', function () {
   });
   it('generate-api-docs-and-update-readme', async () => {
     await withinFsUtils(async () => {
+      function readFileContent() {
+        return fs.readFileSync('README.md', 'utf8');
+      }
+      const originalReadme = readFileContent();
       await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
+      const updatedReadme = readFileContent();
+      expect(updatedReadme).to.equal(originalReadme);
     });
   });
 });
