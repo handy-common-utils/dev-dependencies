@@ -35,13 +35,17 @@ describe('Test project fs-utils', function () {
   });
   it('generate-api-docs-and-update-readme', async () => {
     await withinFsUtils(async () => {
-      function readFileContent() {
-        return fs.readFileSync('README.md', 'utf8');
+      function readFileContentAndTimestamp() {
+        return {
+          content: fs.readFileSync('README.md', 'utf8'),
+          timestamp: fs.statSync('README.md').mtimeMs,
+        };
       }
-      const originalReadme = readFileContent();
+      const originalReadme = readFileContentAndTimestamp();
       await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
-      const updatedReadme = readFileContent();
-      expect(updatedReadme).to.equal(originalReadme);
+      const updatedReadme = readFileContentAndTimestamp();
+      expect(updatedReadme.content).to.equal(originalReadme.content);
+      expect(updatedReadme.timestamp).to.not.equal(originalReadme.timestamp);
     });
   });
 
