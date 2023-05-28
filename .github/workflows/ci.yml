@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches: [ '**' ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: handy-common-utils/automation/github/actions/ci-node@main
+
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project: [ mocha ]
+      
+    steps:
+      - run: cd ${{matrix.project}} ; npm test
+        shell: bash
