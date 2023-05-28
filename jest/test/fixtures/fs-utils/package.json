@@ -4,7 +4,7 @@
   "description": "File system operations related utilities based on fs-extra",
   "scripts": {
     "pretest": "eslint . --ext .ts",
-    "test": "node --version; jest --version; jest --runInBand --maxWorkers=2",
+    "test": "node --version; jest --version; jest --runInBand",
     "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js && es-check",
     "preversion": "generate-api-docs-and-update-readme && git add README.md"
   },
