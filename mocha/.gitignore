@@ -3,3 +3,4 @@
 .nycrc*
 .prettier*
 tsconfig.*
+!test/tsconfig.*
