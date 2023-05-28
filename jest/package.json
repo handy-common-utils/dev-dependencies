@@ -4,7 +4,7 @@
   "description": "This package contains dependencies that are common, including jest",
   "bin": {},
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config test/jest.config.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config test/jest.config.js --runInBand",
     "prepare": "shx cp ../LICENSE ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ."
   },
   "files": [
