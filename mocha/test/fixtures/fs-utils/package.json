@@ -21,7 +21,7 @@
     "replace-in-file-with-file-content": "dist/bin/replace-in-file-with-file-content.js"
   },
   "devDependencies": {
-    "@handy-common-utils/dev-dependencies-mocha": "../..",
+    "@handy-common-utils/dev-dependencies-mocha": "../../..",
     "@types/tmp": "^0.2.0",
     "tmp": "^0.2.1"
   },
