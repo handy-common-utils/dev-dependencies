@@ -45,85 +45,213 @@ There are also several commands you can use directly from your shell/build scrip
 <!-- API start -->
 <a name="readmemd"></a>
 
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>fs-utils | @handy-common-utils/fs-utils</title><meta name="description" content="Documentation for @handy-common-utils/fs-utils"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
-<div class="tsd-toolbar-contents container">
-<div class="table-cell" id="tsd-search" data-base="..">
-<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
-<div class="field">
-<div id="tsd-toolbar-links"></div></div>
-<ul class="results">
-<li class="state loading">Preparing search index...</li>
-<li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@handy-common-utils/fs-utils</a></div>
-<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
-<div class="container container-main">
-<div class="col-8 col-content">
-<div class="tsd-page-title">
-<ul class="tsd-breadcrumb">
-<li><a href="../index.html">@handy-common-utils/fs-utils</a></li>
-<li><a href="fs_utils.html">fs-utils</a></li></ul>
-<h1>Module fs-utils</h1></div>
-<section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography">
-<a href="#re-exports" id="re-exports" style="color: inherit; text-decoration: none;">
-  <h2>Re-exports</h2>
-</a>
+## Module: fs-utils
 
-<a href="#functions" id="functions" style="color: inherit; text-decoration: none;">
-  <h3>Functions</h3>
-</a>
-<ul>
-<li><a href="../classes/fs_utils.FsUtils.md#escapeRegExpReplacement">escapeRegExpReplacement = FsUtils.escapeRegExpReplacement</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#changeFileContent">changeFileContent = FsUtils.changeFileContent</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#replaceInFile">replaceInFile = FsUtils.replaceInFile</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#replaceInFilesWithEncoding">replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#replaceInFiles">replaceInFiles = FsUtils.replaceInFiles</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#addSurroundingInFile">addSurroundingInFile = FsUtils.addSurroundingInFile</a></li>
-<li><a href="../classes/fs_utils.FsUtils.md#replaceInFileWithFileContent">replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent</a></li>
-</ul>
+### Re-exports
 
-<a href="#exports" id="exports" style="color: inherit; text-decoration: none;">
-  <h2>Exports</h2>
-</a>
-</div></section>
-<section class="tsd-panel-group">
-<section class="tsd-panel tsd-typography"></section></section>
-<section class="tsd-panel-group tsd-index-group">
-<section class="tsd-panel tsd-index-panel">
-<h3 class="tsd-index-heading uppercase">Index</h3>
-<section class="tsd-index-section">
-<h3 class="tsd-index-heading">Classes</h3>
-<div class="tsd-index-list"><a href="../classes/fs_utils.FsUtils.html" class="tsd-index-link tsd-kind-class tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Fs<wbr/>Utils</span></a>
-</div></section>
-<section class="tsd-index-section">
-<h3 class="tsd-index-heading">Type Aliases</h3>
-<div class="tsd-index-list"><a href="../types/fs_utils.FileEncoding.html" class="tsd-index-link tsd-kind-type-alias tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg><span>File<wbr/>Encoding</span></a>
-<a href="../types/fs_utils.ReplacementOrBuilder.html" class="tsd-index-link tsd-kind-type-alias tsd-parent-kind-module"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg><span>Replacement<wbr/>Or<wbr/>Builder</span></a>
-</div></section></section></section></div>
-<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-<div class="tsd-navigation settings">
-<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
-<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
-<div class="tsd-accordion-details">
-<div class="tsd-filter-visibility">
-<h4 class="uppercase">Member Visibility</h4><form>
-<ul id="tsd-filter-options">
-<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
-<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></form></div>
-<div class="tsd-theme-toggle">
-<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
-<nav class="tsd-navigation primary">
-<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
-<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
-<div class="tsd-accordion-details">
-<ul>
-<li class="current"><a href="../index.html">@handy-<wbr/>common-<wbr/>utils/fs-<wbr/>utils</a>
-<ul>
-<li class="current selected tsd-kind-module"><a href="fs_utils.html">fs-<wbr/>utils</a></li></ul></li></ul></div></details></nav>
-<nav class="tsd-navigation secondary menu-sticky">
-<ul>
-<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/fs_utils.FsUtils.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Fs<wbr/>Utils</a></li>
-<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="../types/fs_utils.FileEncoding.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>File<wbr/>Encoding</a></li>
-<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="../types/fs_utils.ReplacementOrBuilder.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Replacement<wbr/>Or<wbr/>Builder</a></li></ul></nav></div></div>
-<div class="container tsd-generator">
-<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
-<div class="overlay"></div><script src="../assets/main.js"></script></body></html><!-- API end -->
+#### Functions
+
+- [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](#escapeRegExpReplacement)
+- [changeFileContent = FsUtils.changeFileContent](#changeFileContent)
+- [replaceInFile = FsUtils.replaceInFile](#replaceInFile)
+- [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](#replaceInFilesWithEncoding)
+- [replaceInFiles = FsUtils.replaceInFiles](#replaceInFiles)
+- [addSurroundingInFile = FsUtils.addSurroundingInFile](#addSurroundingInFile)
+- [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](#replaceInFileWithFileContent)
+
+### Exports
+
+### Classes
+
+- [FsUtils](#classesfs_utilsfsutilsmd)
+
+### Type Aliases
+
+#### FileEncoding
+
+Ƭ **FileEncoding**: `Parameters`<`Buffer`[``"toString"``]\>[``"0"``]
+
+___
+
+#### ReplacementOrBuilder
+
+Ƭ **ReplacementOrBuilder**: `string` \| (`matchPattern`: `RegExp`, `filePath`: `string`) => `string` \| `PromiseLike`<`string`\>
+
+## Classes
+
+
+<a name="classesfs_utilsfsutilsmd"></a>
+
+### Class: FsUtils
+
+[fs-utils](#readmemd).FsUtils
+
+#### Constructors
+
+##### constructor
+
+• **new FsUtils**()
+
+#### Methods
+
+##### addSurroundingInFile
+
+▸ `Static` **addSurroundingInFile**(`filePath`, `matchPattern`, `addBefore`, `addAfter`, `fileEncoding?`): `Promise`<`void`\>
+
+Add surrounding content to the matching sections in the text file.
+
+###### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `filePath` | `string` | `undefined` | path to the file |
+| `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be processed. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
+| `addBefore` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
+| `addAfter` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+
+___
+
+##### changeFileContent
+
+▸ `Static` **changeFileContent**(`filePath`, `transformContent`, `fileEncoding?`): `Promise`<`void`\>
+
+Change the text file content.
+This function loads the full content of the file into memory as string, so that it is not suitable for huge (for example, > 500MB) files.
+If the new content and original content are the same, the file won't be touched.
+
+###### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `filePath` | `string` | `undefined` | path to the file |
+| `transformContent` | (`originalContent`: `string`, `filePath`: `string`) => `string` \| `PromiseLike`<`string`\> | `undefined` | function for getting the new file content |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+
+___
+
+##### escapeRegExpReplacement
+
+▸ `Static` **escapeRegExpReplacement**(`input`): `string`
+
+Escape the '
+ sign in the string for using the string as the second argument to String.replace(...)
+
+###### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | the original string |
+
+###### Returns
+
+`string`
+
+a new string with all '
+ in the original string being replaced by '$'
+
+___
+
+##### replaceInFile
+
+▸ `Static` **replaceInFile**(`filePath`, `matchPattern`, `replacementOrBuilder`, `fileEncoding?`): `Promise`<`void`\>
+
+Replace the matching sections in the text file.
+
+###### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `filePath` | `string` | `undefined` | path to the file |
+| `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
+| `replacementOrBuilder` | [`ReplacementOrBuilder`](#replacementorbuilder) | `undefined` | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+
+___
+
+##### replaceInFileWithFileContent
+
+▸ `Static` **replaceInFileWithFileContent**(`filePath`, `matchPattern`, `contentFilePath`, `fileEncoding?`): `Promise`<`void`\>
+
+Replace the matching sections in the text file with content from another file.
+
+###### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `filePath` | `string` | `undefined` | path of the file |
+| `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
+| `contentFilePath` | `string` | `undefined` | path of the file for getting the replacement content |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the files |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+
+___
+
+##### replaceInFiles
+
+▸ `Static` **replaceInFiles**(`matchPattern`, `replacementOrBuilder`, `...filePaths`): `Promise`<`void`\>
+
+Replace the matching sections in multiple utf-8 text files.
+The replacing opertions on those files happen in parallel.
+
+###### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
+| `replacementOrBuilder` | [`ReplacementOrBuilder`](#replacementorbuilder) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
+| `...filePaths` | `string`[] | patsh to the files |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+
+___
+
+##### replaceInFilesWithEncoding
+
+▸ `Static` **replaceInFilesWithEncoding**(`matchPattern`, `replacementOrBuilder`, `fileEncoding`, `...filePaths`): `Promise`<`void`\>
+
+Replace the matching sections in multiple text files.
+The replacing opertions on those files happen in parallel.
+
+###### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
+| `replacementOrBuilder` | [`ReplacementOrBuilder`](#replacementorbuilder) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | encoding of the file, in most of the cases 'utf-8' should be used |
+| `...filePaths` | `string`[] | patsh to the files |
+
+###### Returns
+
+`Promise`<`void`\>
+
+Promise of void
+<!-- API end -->
