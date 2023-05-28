@@ -1,11 +1,5 @@
-.eslint*
-!test/fixtures/**/.eslint*
-.mocharc*
-!test/fixtures/**/.mocharc*
-.nycrc*
-!test/fixtures/**/.nycrc*
-.prettier*
-!test/fixtures/**/.prettier*
-tsconfig.*
-!test/tsconfig.*
-!test/fixtures/**/tsconfig.*
+/.eslint*
+/.mocharc*
+/.nycrc*
+/.prettier*
+/tsconfig.*
