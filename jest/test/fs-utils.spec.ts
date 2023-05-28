@@ -49,6 +49,7 @@ describe('Test project fs-utils', function () {
       await withChangedFile('src/fs-utils.ts', content => content.replace('Promise.', 'Promise1.'), async () => {
         try {
           const output = await $`npm test`;
+          console.log(output);
           expect(output.exitCode).toEqual(1);
         } catch (error) {
           console.log(error);
