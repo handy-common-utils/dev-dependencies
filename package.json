@@ -15,6 +15,9 @@
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.4"
   },
+  "overrides": {
+    "@qiwi/semantic-release-gh-pages-plugin": "../../@types/mocha"
+  },
   "scripts": {
     "format:all": "prettier --write --ignore-unknown .",
     "prepare": "husky install"
