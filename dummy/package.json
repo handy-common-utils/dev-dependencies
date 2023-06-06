@@ -1,0 +1,30 @@
+{
+  "name": "@handy-common-utils/dummy",
+  "version": "1.0.0",
+  "description": "This package contains nothing, it is supposed to be used in occasions that a useless dependency must be provided",
+  "bin": {},
+  "scripts": {
+    "test": ""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/handy-common-utils/dev-dependencies.git"
+  },
+  "keywords": [
+    "handy-common-utils",
+    "dev",
+    "dummy",
+    "dependencies"
+  ],
+  "author": "James Hu",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/handy-common-utils/dev-dependencies/issues"
+  },
+  "homepage": "https://github.com/handy-common-utils/dev-dependencies/dummy/tree/master/dummy",
+  "dependencies": {
+  }
+}

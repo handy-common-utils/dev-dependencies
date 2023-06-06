@@ -20,7 +20,7 @@ jobs:
 
     strategy:
       matrix:
-        project: [ mocha, jest ]
+        project: [ common, dummy, mocha, jest ]
       
     steps:
       - uses: actions/checkout@v3
