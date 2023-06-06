@@ -3,6 +3,7 @@
   "workspaces": [
     "mocha",
     "jest",
+    "dummy",
     "common"
   ],
   "volta": {
