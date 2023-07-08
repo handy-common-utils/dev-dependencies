@@ -32,11 +32,10 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies/common/tree/master/common#readme",
   "dependencies": {
-    "@handy-common-utils/dev-utils": "^1.6.0",
+    "@handy-common-utils/dev-utils": "^1.7.0",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "es-check": "^7.1.1",
     "eslint": "^8.41.0",
-    "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
     "eslint-plugin-unicorn": "^46.0.1",
     "husky": "^8.0.3",
