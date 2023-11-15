@@ -13,9 +13,7 @@ jobs:
         with:
           path: |
             node_modules
-            common/node_modules
-            mocha/node_modules
-            jest/node_modules
+            */node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
   test:
@@ -35,9 +33,7 @@ jobs:
         with:
           path: |
             node_modules
-            common/node_modules
-            mocha/node_modules
-            jest/node_modules
+            */node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npm -w ${{matrix.project}} test
         shell: bash
