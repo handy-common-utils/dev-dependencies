@@ -11,7 +11,11 @@ jobs:
       - uses: handy-common-utils/automation/github/actions/prepare-node@main
       - uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
+            common/node_modules
+            mocha/node_modules
+            jest/node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
   test:
