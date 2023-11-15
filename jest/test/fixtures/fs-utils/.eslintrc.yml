@@ -1,3 +1,6 @@
 root: true
 extends:
-  - ../../../../node_modules/@handy-common-utils/dev-utils/.eslintrc.yml
+  - sensible-prettier-typescript
+rules:
+  perfectionist/sort-imports: off
+  unicorn/prefer-string-replace-all: off
