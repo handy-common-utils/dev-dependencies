@@ -7,4 +7,5 @@ module.exports = {
     'sensible-prettier-typescript',
   ],
   parserOptions: { tsconfigRootDir: __dirname },
+  // place your customisation here
 };

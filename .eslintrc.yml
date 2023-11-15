@@ -1,6 +1,4 @@
 root: true
 extends:
   - sensible-prettier-typescript
-# rules:
-#   perfectionist/sort-imports: off
-#   unicorn/prefer-string-replace-all: off
+# place your customisation here

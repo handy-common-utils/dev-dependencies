@@ -1,6 +1,5 @@
-import config from 'eslint-config-sensible-prettier-typescript/prettier.config';
-
-export default {
+const config = require('eslint-config-sensible-prettier-typescript/prettier.config');
+module.exports = {
   ...config,
-  // your overrides
+  // place your customisation here
 };
