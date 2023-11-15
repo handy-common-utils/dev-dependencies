@@ -9,13 +9,11 @@ jobs:
 
     steps:
       - uses: handy-common-utils/automation/github/actions/prepare-node@main
-      - uses: actions/cache@v3
+      - uses: actions/cache/save@v3
         with:
           path: |
             node_modules
-            common/node_modules
-            mocha/node_modules
-            jest/node_modules
+            */node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
   test:
@@ -31,9 +29,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: package.json
-      - uses: actions/cache@v3
+      - uses: actions/cache/restore@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
+            */node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npm -w ${{matrix.project}} test
         shell: bash
