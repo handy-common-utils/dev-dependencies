@@ -31,5 +31,5 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-      - run: cd ${{matrix.project}} ; npm test
+      - run: npm -w ${{matrix.project}} test
         shell: bash
