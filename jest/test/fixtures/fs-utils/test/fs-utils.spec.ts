@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/prefer-node-protocol */
-import { describe, it, expect } from '@jest/globals';
+import { describe, expect, it } from '@jest/globals';
 import * as fs from 'fs';
 import { promisify } from 'util';
 const fsWriteFile = promisify(fs.writeFile);
