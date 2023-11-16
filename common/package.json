@@ -35,7 +35,7 @@
     "@handy-common-utils/dev-utils": "^1.7.0",
     "es-check": "^7.1.1",
     "eslint": "^8.52.0",
-    "eslint-config-sensible-prettier-typescript": "^1.2.0",
+    "eslint-config-sensible-prettier-typescript": "^1.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.1.0",
