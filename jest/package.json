@@ -1,6 +1,6 @@
 {
   "name": "@handy-common-utils/dev-dependencies-jest",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "This package contains dependencies that are common, including jest",
   "bin": {},
   "scripts": {
