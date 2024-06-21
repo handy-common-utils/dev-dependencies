@@ -23,7 +23,9 @@
   "devDependencies": {
     "@handy-common-utils/dev-dependencies-mocha": "../../..",
     "@types/tmp": "^0.2.0",
-    "tmp": "^0.2.1"
+    "mocha": "^10.4.0",
+    "tmp": "^0.2.1",
+    "ts-node": "^10.9.2"
   },
   "publishConfig": {
     "access": "public"
