@@ -5,7 +5,7 @@
   "scripts": {
     "pretest": "eslint . --ext .ts",
     "test": "nyc mocha -r ts-node/register test/**/*spec.ts",
-    "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js && es-check",
+    "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
     "preversion": "generate-api-docs-and-update-readme && git add README.md"
   },
   "files": [
