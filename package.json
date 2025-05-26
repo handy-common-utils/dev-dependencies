@@ -23,6 +23,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^15.2.9"
   }
 }
