@@ -41,10 +41,14 @@ describe('Test project fs-utils', function () {
         };
       }
       const originalReadme = readFileContentAndTimestamp();
-      await $`node ../../../../common/node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
-      const updatedReadme = readFileContentAndTimestamp();
-      expect(updatedReadme.content).toEqual(originalReadme.content);
-      expect(updatedReadme.timestamp).not.toEqual(originalReadme.timestamp);
+      expect(originalReadme.content).toContain('<!-- API start -->');
+      await withChangedFile('README.md', content => content.replace('<!-- API start -->', '<!-- API start -->\n<!-- This is a test comment -->'), async () => {
+        expect(readFileContentAndTimestamp().content).toContain('<!-- This is a test comment -->');
+        await $`node ../../../../common/node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
+        const updatedReadme = readFileContentAndTimestamp();
+        expect(updatedReadme.content).toEqual(originalReadme.content);
+        expect(updatedReadme.timestamp).not.toEqual(originalReadme.timestamp);
+      });
     });
   });
 

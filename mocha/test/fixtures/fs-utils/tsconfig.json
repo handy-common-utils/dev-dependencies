@@ -1,8 +1,9 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
-  "include": ["src/**/*", "test/**/*"],
+  "include": ["src/**/*"],
   "compilerOptions": {
-    "baseUrl": "../",
+    "baseUrl": "./",
+    "rootDir": "./src",
     "outDir": "dist",
     "sourceMap": true,
     "module": "NodeNext",

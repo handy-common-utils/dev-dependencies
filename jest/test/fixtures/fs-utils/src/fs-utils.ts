@@ -5,13 +5,13 @@
  *
  * ### Functions
  *
- * - [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](../classes/fs_utils.FsUtils.md#escapeRegExpReplacement)
- * - [changeFileContent = FsUtils.changeFileContent](../classes/fs_utils.FsUtils.md#changeFileContent)
- * - [replaceInFile = FsUtils.replaceInFile](../classes/fs_utils.FsUtils.md#replaceInFile)
- * - [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](../classes/fs_utils.FsUtils.md#replaceInFilesWithEncoding)
- * - [replaceInFiles = FsUtils.replaceInFiles](../classes/fs_utils.FsUtils.md#replaceInFiles)
- * - [addSurroundingInFile = FsUtils.addSurroundingInFile](../classes/fs_utils.FsUtils.md#addSurroundingInFile)
- * - [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](../classes/fs_utils.FsUtils.md#replaceInFileWithFileContent)
+ * - [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](classes/FsUtils.md#api-escaperegexprreplacement)
+ * - [changeFileContent = FsUtils.changeFileContent](classes/FsUtils.md#api-changefilecontent)
+ * - [replaceInFile = FsUtils.replaceInFile](classes/FsUtils.md#api-replaceinfile)
+ * - [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](classes/FsUtils.md#api-replaceinfileswithencoding)
+ * - [replaceInFiles = FsUtils.replaceInFiles](classes/FsUtils.md#api-replaceinfiles)
+ * - [addSurroundingInFile = FsUtils.addSurroundingInFile](classes/FsUtils.md#api-addsurroundinginfile)
+ * - [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](classes/FsUtils.md#api-replaceinfilewithfilecontent)
  *
  * ## Exports
  *

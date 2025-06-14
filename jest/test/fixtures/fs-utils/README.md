@@ -51,13 +51,13 @@ There are also several commands you can use directly from your shell/build scrip
 
 #### Functions
 
-- [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](#escapeRegExpReplacement)
-- [changeFileContent = FsUtils.changeFileContent](#changeFileContent)
-- [replaceInFile = FsUtils.replaceInFile](#replaceInFile)
-- [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](#replaceInFilesWithEncoding)
-- [replaceInFiles = FsUtils.replaceInFiles](#replaceInFiles)
-- [addSurroundingInFile = FsUtils.addSurroundingInFile](#addSurroundingInFile)
-- [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](#replaceInFileWithFileContent)
+- [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](#api-escaperegexprreplacement)
+- [changeFileContent = FsUtils.changeFileContent](#api-changefilecontent)
+- [replaceInFile = FsUtils.replaceInFile](#api-replaceinfile)
+- [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](#api-replaceinfileswithencoding)
+- [replaceInFiles = FsUtils.replaceInFiles](#api-replaceinfiles)
+- [addSurroundingInFile = FsUtils.addSurroundingInFile](#api-addsurroundinginfile)
+- [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](#api-replaceinfilewithfilecontent)
 
 ### Exports
 
