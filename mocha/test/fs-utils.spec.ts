@@ -42,7 +42,7 @@ describe('Test project fs-utils', function () {
         };
       }
       const originalReadme = readFileContentAndTimestamp();
-      await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
+      await $`node ../../../../common/node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
       const updatedReadme = readFileContentAndTimestamp();
       expect(updatedReadme.content).to.equal(originalReadme.content);
       expect(updatedReadme.timestamp).to.not.equal(originalReadme.timestamp);
