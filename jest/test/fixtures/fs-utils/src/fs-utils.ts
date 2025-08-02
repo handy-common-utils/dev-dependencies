@@ -74,13 +74,13 @@ export abstract class FsUtils {
 
   /**
    * Replace the matching sections in multiple text files.
-   * The replacing opertions on those files happen in parallel.
+   * The replacing operations on those files happen in parallel.
    * @param matchPattern RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?`
    * @param replacementOrBuilder The replacement string or a function for building the replacement string.
    *                              Please note that you can use special replacement patterns but also you need to take care of the escaping.
    *                              For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
    * @param fileEncoding encoding of the file, in most of the cases 'utf-8' should be used
-   * @param filePaths patsh to the files
+   * @param filePaths path to the files
    * @returns Promise of void
    */
   static async replaceInFilesWithEncoding(matchPattern: RegExp, replacementOrBuilder: ReplacementOrBuilder, fileEncoding: FileEncoding, ...filePaths: string[]): Promise<void> {
@@ -89,12 +89,12 @@ export abstract class FsUtils {
 
   /**
    * Replace the matching sections in multiple utf-8 text files.
-   * The replacing opertions on those files happen in parallel.
+   * The replacing operations on those files happen in parallel.
    * @param matchPattern RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?`
    * @param replacementOrBuilder The replacement string or a function for building the replacement string.
    *                              Please note that you can use special replacement patterns but also you need to take care of the escaping.
    *                              For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-   * @param filePaths patsh to the files
+   * @param filePaths path to the files
    * @returns Promise of void
    */
   static async replaceInFiles(matchPattern: RegExp, replacementOrBuilder: ReplacementOrBuilder, ...filePaths: string[]): Promise<void> {

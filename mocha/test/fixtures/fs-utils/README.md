@@ -203,7 +203,7 @@ Promise of void
 > `static` **replaceInFiles**(`matchPattern`, `replacementOrBuilder`, ...`filePaths`): `Promise`\<`void`\>
 
 Replace the matching sections in multiple utf-8 text files.
-The replacing opertions on those files happen in parallel.
+The replacing operations on those files happen in parallel.
 
 ###### Parameters
 
@@ -211,7 +211,7 @@ The replacing opertions on those files happen in parallel.
 | ------ | ------ | ------ |
 | `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
-| ...`filePaths` | `string`[] | patsh to the files |
+| ...`filePaths` | `string`[] | path to the files |
 
 ###### Returns
 
@@ -228,7 +228,7 @@ Promise of void
 > `static` **replaceInFilesWithEncoding**(`matchPattern`, `replacementOrBuilder`, `fileEncoding`, ...`filePaths`): `Promise`\<`void`\>
 
 Replace the matching sections in multiple text files.
-The replacing opertions on those files happen in parallel.
+The replacing operations on those files happen in parallel.
 
 ###### Parameters
 
@@ -237,7 +237,7 @@ The replacing opertions on those files happen in parallel.
 | `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
 | `fileEncoding` | `undefined` \| `string` | encoding of the file, in most of the cases 'utf-8' should be used |
-| ...`filePaths` | `string`[] | patsh to the files |
+| ...`filePaths` | `string`[] | path to the files |
 
 ###### Returns
 
