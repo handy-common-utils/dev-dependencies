@@ -1,10 +1,17 @@
 {
-  "extends": "../../../../node_modules/@handy-common-utils/dev-utils/tsconfig.json",
-  "include": [
-    "src/**/*"
-  ],
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": ["src/**/*"],
   "compilerOptions": {
-    "skipLibCheck": true,
-    "outDir": "dist"
+    "baseUrl": "./",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }

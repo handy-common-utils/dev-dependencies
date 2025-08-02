@@ -4,7 +4,7 @@
   "description": "This package contains dependencies that are common, including mocha",
   "bin": {},
   "scripts": {
-    "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --loader=tsx test/*.spec.ts",
+    "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --import=tsx test/*.spec.ts",
     "prepare": "shx cp ../LICENSE ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ../.nycrc.* ../.mocharc.* ."
   },
   "files": [
@@ -49,7 +49,7 @@
     "sinon-chai": "^3.7.0"
   },
   "devDependencies": {
-    "tsx": "^3.12.7",
+    "tsx": "^4.20.3",
     "zx": "^7.2.2"
   }
 }

@@ -5,13 +5,13 @@
  *
  * ### Functions
  *
- * - [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](../classes/fs_utils.FsUtils.md#escapeRegExpReplacement)
- * - [changeFileContent = FsUtils.changeFileContent](../classes/fs_utils.FsUtils.md#changeFileContent)
- * - [replaceInFile = FsUtils.replaceInFile](../classes/fs_utils.FsUtils.md#replaceInFile)
- * - [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](../classes/fs_utils.FsUtils.md#replaceInFilesWithEncoding)
- * - [replaceInFiles = FsUtils.replaceInFiles](../classes/fs_utils.FsUtils.md#replaceInFiles)
- * - [addSurroundingInFile = FsUtils.addSurroundingInFile](../classes/fs_utils.FsUtils.md#addSurroundingInFile)
- * - [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](../classes/fs_utils.FsUtils.md#replaceInFileWithFileContent)
+ * - [escapeRegExpReplacement = FsUtils.escapeRegExpReplacement](classes/FsUtils.md#api-escaperegexprreplacement)
+ * - [changeFileContent = FsUtils.changeFileContent](classes/FsUtils.md#api-changefilecontent)
+ * - [replaceInFile = FsUtils.replaceInFile](classes/FsUtils.md#api-replaceinfile)
+ * - [replaceInFilesWithEncoding = FsUtils.replaceInFilesWithEncoding](classes/FsUtils.md#api-replaceinfileswithencoding)
+ * - [replaceInFiles = FsUtils.replaceInFiles](classes/FsUtils.md#api-replaceinfiles)
+ * - [addSurroundingInFile = FsUtils.addSurroundingInFile](classes/FsUtils.md#api-addsurroundinginfile)
+ * - [replaceInFileWithFileContent = FsUtils.replaceInFileWithFileContent](classes/FsUtils.md#api-replaceinfilewithfilecontent)
  *
  * ## Exports
  *
@@ -74,13 +74,13 @@ export abstract class FsUtils {
 
   /**
    * Replace the matching sections in multiple text files.
-   * The replacing opertions on those files happen in parallel.
+   * The replacing operations on those files happen in parallel.
    * @param matchPattern RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?`
    * @param replacementOrBuilder The replacement string or a function for building the replacement string.
    *                              Please note that you can use special replacement patterns but also you need to take care of the escaping.
    *                              For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
    * @param fileEncoding encoding of the file, in most of the cases 'utf-8' should be used
-   * @param filePaths patsh to the files
+   * @param filePaths path to the files
    * @returns Promise of void
    */
   static async replaceInFilesWithEncoding(matchPattern: RegExp, replacementOrBuilder: ReplacementOrBuilder, fileEncoding: FileEncoding, ...filePaths: string[]): Promise<void> {
@@ -89,12 +89,12 @@ export abstract class FsUtils {
 
   /**
    * Replace the matching sections in multiple utf-8 text files.
-   * The replacing opertions on those files happen in parallel.
+   * The replacing operations on those files happen in parallel.
    * @param matchPattern RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?`
    * @param replacementOrBuilder The replacement string or a function for building the replacement string.
    *                              Please note that you can use special replacement patterns but also you need to take care of the escaping.
    *                              For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-   * @param filePaths patsh to the files
+   * @param filePaths path to the files
    * @returns Promise of void
    */
   static async replaceInFiles(matchPattern: RegExp, replacementOrBuilder: ReplacementOrBuilder, ...filePaths: string[]): Promise<void> {

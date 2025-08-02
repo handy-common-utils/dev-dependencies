@@ -12,16 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: handy-common-utils/automation/github/actions/prepare-node@main
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: 'package.json'
-          cache: 'npm'
-          cache-dependency-path: |
-            package.json
-            package-lock.json
+          node-version: .nvmrc
       - run: npm ci
       - run: npx multi-semrel
         env:
