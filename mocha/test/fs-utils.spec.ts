@@ -45,7 +45,7 @@ describe('Test project fs-utils', function () {
       expect(originalReadme.content).to.include('<!-- API start -->');
       await withChangedFile('README.md', content => content.replace('<!-- API start -->', '<!-- API start -->\n<!-- This is a test comment -->'), async () => {
         expect(readFileContentAndTimestamp().content).to.include('<!-- This is a test comment -->');
-        await $`node ../../../../common/node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
+        await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
         const updatedReadme = readFileContentAndTimestamp();
         expect(updatedReadme.content).to.equal(originalReadme.content);
         expect(updatedReadme.timestamp).not.to.equal(originalReadme.timestamp);

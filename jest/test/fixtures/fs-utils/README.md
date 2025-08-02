@@ -79,7 +79,7 @@ There are also several commands you can use directly from your shell/build scrip
 
 <a id="classesfsutilsmd"></a>
 
-### Class: `abstract` FsUtils
+### Abstract Class: FsUtils
 
 #### Constructors
 
