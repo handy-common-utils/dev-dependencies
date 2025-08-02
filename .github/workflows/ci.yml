@@ -9,6 +9,8 @@ jobs:
 
     steps:
       - uses: handy-common-utils/automation/github/actions/prepare-node@main
+        with:
+          node-version: .nvmrc
       - uses: actions/cache/save@v3
         with:
           path: |
