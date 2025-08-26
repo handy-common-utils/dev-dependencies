@@ -5,7 +5,7 @@
   "bin": {},
   "scripts": {
     "test": "",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ."
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore '# These are just example[\\x00-\\x7F]*?\\n\\n' ''"
   },
   "files": [
     "tsconfig.*",
