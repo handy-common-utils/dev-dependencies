@@ -7,17 +7,22 @@
     "common"
   ],
   "devDependencies": {
+    "@handy-common-utils/dummy": "^1.0.1",
     "@qiwi/semrel-toolkit": "^3.2.13",
     "@tsconfig/node20": "^20.1.6",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2"
   },
-  "overrides": {
-    "@qiwi/semantic-release-gh-pages-plugin": "../../@types/mocha"
-  },
   "scripts": {
     "format:all": "prettier --write --ignore-unknown .",
-    "prepare": "husky install"
+    "prepare": "husky"
+  },
+  "overrides": {
+    "npm": "~10.8.2",
+    "@qiwi/semantic-release-gh-pages-plugin": "@handy-common-utils/dummy"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

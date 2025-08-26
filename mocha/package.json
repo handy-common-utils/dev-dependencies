@@ -5,7 +5,7 @@
   "bin": {},
   "scripts": {
     "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --import=tsx test/*.spec.ts",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ../.nycrc.* ../.mocharc.* ."
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ../.nycrc.* ../.mocharc.* ."
   },
   "files": [
     "tsconfig.*",
