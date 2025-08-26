@@ -10,9 +10,9 @@
   "files": [
     "tsconfig.*",
     "jest.config.*",
-    ".eslintrc.*",
-    ".eslintignore",
-    ".prettier*"
+    "eslint.config.*",
+    ".prettierignore",
+    "prettier.config.*"
   ],
   "publishConfig": {
     "access": "public"

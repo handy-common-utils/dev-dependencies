@@ -1,5 +1,5 @@
 import { describe, expect, it, jest } from '@jest/globals';
-import { $, ProcessOutput, cd, fs, within } from 'zx';
+import { $, cd, fs, ProcessOutput, within } from 'zx';
 
 async function withinFsUtils<R>(callback: () => R | Promise<R>): Promise<R> {
   return within(async () => {

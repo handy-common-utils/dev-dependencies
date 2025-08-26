@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import 'zx/globals';
+import { $, cd, fs, ProcessOutput, within } from 'zx';
 
 async function withinFsUtils<R>(callback: () => R | Promise<R>): Promise<R> {
   return within(async () => {
