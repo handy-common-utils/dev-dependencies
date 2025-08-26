@@ -1,7 +1,7 @@
-.eslint*
-eslint.config.*
-.mocharc*
-.nycrc*
-.prettier*
-prettier.config.*
-tsconfig.*
+/.eslint*
+/eslint.config.*
+/.mocharc*
+/.nycrc*
+/.prettier*
+/prettier.config.*
+/tsconfig.*
