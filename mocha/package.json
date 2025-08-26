@@ -4,6 +4,7 @@
   "description": "This package contains dependencies that are common, including mocha",
   "bin": {},
   "scripts": {
+    "pretest": "eslint .",
     "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --import=tsx test/*.spec.ts",
     "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ../.nycrc.* ../.mocharc.* . && replace-in-file .prettierignore 'mocha/test/' 'test/' && replace-in-file .prettierignore 'jest/test/.*?\\n' ''"
   },

@@ -4,6 +4,7 @@
   "description": "This package contains dependencies that are common, including jest",
   "bin": {},
   "scripts": {
+    "pretest": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config test/jest.config.js --runInBand",
     "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore 'jest/test/' 'test/' && replace-in-file .prettierignore 'mocha/test/.*?\\n' ''"
   },
