@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import 'zx/globals';
 
-async function withinFsUtils<R>(callback: () => R|Promise<R>): Promise<R> {
+async function withinFsUtils<R>(callback: () => R | Promise<R>): Promise<R> {
   return within(async () => {
     cd('test/fixtures/fs-utils');
     return callback();
@@ -44,53 +44,69 @@ describe('Test project fs-utils', function () {
       }
       const originalReadme = readFileContentAndTimestamp();
       expect(originalReadme.content).to.include('<!-- API start -->');
-      await withChangedFile('README.md', content => content.replace('<!-- API start -->', '<!-- API start -->\n<!-- This is a test comment -->'), async () => {
-        expect(readFileContentAndTimestamp().content).to.include('<!-- This is a test comment -->');
-        await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
-        const updatedReadme = readFileContentAndTimestamp();
-        expect(updatedReadme.content).to.equal(originalReadme.content);
-        expect(updatedReadme.timestamp).not.to.equal(originalReadme.timestamp);
-      });
+      await withChangedFile(
+        'README.md',
+        (content) => content.replace('<!-- API start -->', '<!-- API start -->\n<!-- This is a test comment -->'),
+        async () => {
+          expect(readFileContentAndTimestamp().content).to.include('<!-- This is a test comment -->');
+          await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
+          const updatedReadme = readFileContentAndTimestamp();
+          expect(updatedReadme.content).to.equal(originalReadme.content);
+          expect(updatedReadme.timestamp).not.to.equal(originalReadme.timestamp);
+        },
+      );
     });
   });
 
   it('should "npm test" fail when there\'s compilation error in src', async () => {
     await withinFsUtils(async () => {
-      await withChangedFile('src/fs-utils.ts', content => content.replace('Promise.', 'Promise1.'), async () => {
-        try {
-          const output = await $`npm test`;
-          expect(output.exitCode).to.equal(1);
-        } catch (error) {
-          const output = error as ProcessOutput;
-          expect(output.exitCode).to.equal(1);
-        }
-      });
+      await withChangedFile(
+        'src/fs-utils.ts',
+        (content) => content.replace('Promise.', 'Promise1.'),
+        async () => {
+          try {
+            const output = await $`npm test`;
+            expect(output.exitCode).to.equal(1);
+          } catch (error) {
+            const output = error as ProcessOutput;
+            expect(output.exitCode).to.equal(1);
+          }
+        },
+      );
     });
   });
   it('should "npm test" fail when there\'s compilation error in test', async () => {
     await withinFsUtils(async () => {
-      await withChangedFile('test/fs-utils.spec.ts', content => content.replace('FsUtils.replaceInFiles', 'FsUtils.replaceInFiles2'), async () => {
-        try {
-          const output = await $`npm test`;
-          expect(output.exitCode).to.equal(1);
-        } catch (error) {
-          const output = error as ProcessOutput;
-          expect(output.exitCode).to.equal(1);
-        }
-      });
+      await withChangedFile(
+        'test/fs-utils.spec.ts',
+        (content) => content.replace('FsUtils.replaceInFiles', 'FsUtils.replaceInFiles2'),
+        async () => {
+          try {
+            const output = await $`npm test`;
+            expect(output.exitCode).to.equal(1);
+          } catch (error) {
+            const output = error as ProcessOutput;
+            expect(output.exitCode).to.equal(1);
+          }
+        },
+      );
     });
   });
   it('should "npm test" fail when there\'s test case failed', async () => {
     await withinFsUtils(async () => {
-      await withChangedFile('test/fs-utils.spec.ts', content => content.replace('.to.', '.to.not.'), async () => {
-        try {
-          const output = await $`npm test`;
-          expect(output.exitCode).to.equal(1);
-        } catch (error) {
-          const output = error as ProcessOutput;
-          expect(output.exitCode).to.equal(1);
-        }
-      });
+      await withChangedFile(
+        'test/fs-utils.spec.ts',
+        (content) => content.replace('.to.', '.to.not.'),
+        async () => {
+          try {
+            const output = await $`npm test`;
+            expect(output.exitCode).to.equal(1);
+          } catch (error) {
+            const output = error as ProcessOutput;
+            expect(output.exitCode).to.equal(1);
+          }
+        },
+      );
     });
   });
 });
