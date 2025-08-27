@@ -111,7 +111,7 @@ Add surrounding content to the matching sections in the text file.
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be processed. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `addBefore` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
 | `addAfter` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
-| `fileEncoding` | `undefined` \| `string` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -137,7 +137,7 @@ If the new content and original content are the same, the file won't be touched.
 | ------ | ------ | ------ | ------ |
 | `filePath` | `string` | `undefined` | path to the file |
 | `transformContent` | (`originalContent`, `filePath`) => `string` \| `PromiseLike`\<`string`\> | `undefined` | function for getting the new file content |
-| `fileEncoding` | `undefined` \| `string` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -186,7 +186,7 @@ Replace the matching sections in the text file.
 | `filePath` | `string` | `undefined` | path to the file |
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | `undefined` | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
-| `fileEncoding` | `undefined` \| `string` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -236,7 +236,7 @@ The replacing operations on those files happen in parallel.
 | ------ | ------ | ------ |
 | `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
-| `fileEncoding` | `undefined` \| `string` | encoding of the file, in most of the cases 'utf-8' should be used |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | encoding of the file, in most of the cases 'utf-8' should be used |
 | ...`filePaths` | `string`[] | path to the files |
 
 ###### Returns
@@ -262,7 +262,7 @@ Replace the matching sections in the text file with content from another file.
 | `filePath` | `string` | `undefined` | path of the file |
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `contentFilePath` | `string` | `undefined` | path of the file for getting the replacement content |
-| `fileEncoding` | `undefined` \| `string` | `'utf-8'` | encoding of the files |
+| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the files |
 
 ###### Returns
 

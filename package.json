@@ -24,5 +24,10 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@jest/globals": "^30.0.5",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1"
   }
 }

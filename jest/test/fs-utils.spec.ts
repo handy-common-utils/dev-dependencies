@@ -1,9 +1,10 @@
 import { describe, expect, it, jest } from '@jest/globals';
-import { $, cd, fs, ProcessOutput, within } from 'zx';
+import { fileURLToPath } from 'node:url';
+import { $, cd, fs, path, ProcessOutput, within } from 'zx';
 
 async function withinFsUtils<R>(callback: () => R | Promise<R>): Promise<R> {
   return within(async () => {
-    cd('test/fixtures/fs-utils');
+    cd(path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures/fs-utils'));
     return callback();
   });
 }
