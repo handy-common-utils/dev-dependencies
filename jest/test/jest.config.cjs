@@ -12,8 +12,5 @@ module.exports = {
       },
     ],
   },
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/fixtures/',
-  ],
+  testPathIgnorePatterns: ['/node_modules/', '/fixtures/'],
 };

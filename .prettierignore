@@ -16,3 +16,9 @@ reports/
 
 api-docs/
 **/api-docs/
+
+# These are just example ignore patterns, feel free to remove or modify
+mocha/test/fixtures/
+jest/test/fixtures/
+
+# Feel free to add your own ignore patterns below and/or customize existing ones above

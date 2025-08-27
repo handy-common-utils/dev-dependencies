@@ -4,14 +4,14 @@
   "description": "This package contains dependencies that are common between @handy-common-utils/dev-dependencies-common-jest and @handy-common-utils/dev-dependencies-common-mocha",
   "bin": {},
   "scripts": {
-    "test": "",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ."
+    "test": "eslint .",
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore '# These are just example[\\x00-\\x7F]*?\\n\\n' ''"
   },
   "files": [
     "tsconfig.*",
-    ".eslintrc.*",
-    ".eslintignore",
-    ".prettier*"
+    "eslint.config.*",
+    ".prettierignore",
+    "prettier.config.*"
   ],
   "publishConfig": {
     "access": "public"
@@ -33,17 +33,16 @@
   "homepage": "https://github.com/handy-common-utils/dev-dependencies/common/tree/master/common#readme",
   "dependencies": {
     "@handy-common-utils/dev-utils": "^1.8.0",
-    "es-check": "^9.1.4",
-    "eslint": "^9.32.0",
-    "eslint-config-sensible-prettier-typescript": "^1.3.0",
+    "es-check": "^9.3.1",
+    "eslint": "^9.34.0",
+    "eslint-config-sensible-prettier-typescript": "^1.7.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.5",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.6.2",
     "shx": "^0.4.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
+    "typescript": "^5.9.2",
     "wait-on": "^8.0.4"
   }
 }

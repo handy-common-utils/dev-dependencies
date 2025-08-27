@@ -1,8 +1,16 @@
 spec:
   - 'test/**/*.spec.ts'
+  - 'test/**/*.spec.mts'
+  - 'test/**/*.spec.cts'
   - 'test/**/*.spec.int.ts'
+  - 'test/**/*.spec.int.mts'
+  - 'test/**/*.spec.int.cts'
   - 'test/**/*.test.ts'
+  - 'test/**/*.test.mts'
+  - 'test/**/*.test.cts'
   - 'test/**/*.test.int.ts'
+  - 'test/**/*.test.int.mts'
+  - 'test/**/*.test.int.cts'
 exclude:
   - '**/node_modules/**'
 require:

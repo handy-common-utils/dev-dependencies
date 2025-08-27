@@ -4,14 +4,15 @@
   "description": "This package contains dependencies that are common, including mocha",
   "bin": {},
   "scripts": {
+    "pretest": "eslint .",
     "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --import=tsx test/*.spec.ts",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../.eslintrc.* ../.eslintignore ../.prettier* ../.nycrc.* ../.mocharc.* ."
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ../.nycrc.* ../.mocharc.* . && replace-in-file .prettierignore 'mocha/test/' 'test/' && replace-in-file .prettierignore 'jest/test/.*?\\n' '' && replace-in-file eslint.config.cjs 'mocha/test/' 'test/'"
   },
   "files": [
     "tsconfig.*",
-    ".eslintrc.*",
-    ".eslintignore",
-    ".prettier*",
+    "eslint.config.*",
+    ".prettierignore",
+    "prettier.config.*",
     ".nycrc.*",
     ".mocharc.*"
   ],
@@ -36,20 +37,20 @@
   "dependencies": {
     "@handy-common-utils/dev-dependencies-common": "1.7.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/chai": "^4.3.10",
-    "@types/chai-as-promised": "^7.1.8",
-    "@types/mocha": "^10.0.6",
-    "@types/sinon": "^17.0.3",
-    "@types/sinon-chai": "^3.2.12",
-    "chai": "^4.4.1",
-    "chai-as-promised": "^7",
-    "mocha": "^10.4.0",
-    "nyc": "^17.0.0",
-    "sinon": "^18.0.0",
-    "sinon-chai": "^3.7.0"
+    "@types/chai": "^5.2.2",
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/mocha": "^10.0.10",
+    "@types/sinon": "^17.0.4",
+    "@types/sinon-chai": "^4.0.0",
+    "chai": "^6.0.1",
+    "chai-as-promised": "^8.0.2",
+    "mocha": "^11.7.1",
+    "nyc": "^17.1.0",
+    "sinon": "^21.0.0",
+    "sinon-chai": "^4.0.1"
   },
   "devDependencies": {
-    "tsx": "^4.20.3",
-    "zx": "^7.2.2"
+    "tsx": "^4.20.5",
+    "zx": "^8.8.1"
   }
 }

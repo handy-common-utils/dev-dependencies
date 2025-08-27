@@ -1,9 +1,10 @@
-/* eslint-disable unicorn/prefer-node-protocol */
+/* eslint-disable unicorn/prefer-node-protocol, unicorn/prefer-string-replace-all */
 import { expect } from 'chai';
 import * as fs from 'fs';
 import { promisify } from 'util';
 const fsWriteFile = promisify(fs.writeFile);
 import * as tmp from 'tmp';
+
 import { FsUtils } from '../src/fs-utils';
 
 const originalFileContent = `This is the fist line.

@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ '**' ]
+    branches: ['**']
 
 jobs:
   setup:
@@ -24,8 +24,8 @@ jobs:
 
     strategy:
       matrix:
-        project: [ common, dummy, mocha, jest ]
-      
+        project: [common, dummy, mocha, jest]
+
     steps:
       - uses: handy-common-utils/automation/github/actions/prepare-node@main
         with:

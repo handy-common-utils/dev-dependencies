@@ -32,6 +32,7 @@ export abstract class FsUtils {
    * @returns a new string with all '$' in the original string being replaced by '$$'
    */
   static escapeRegExpReplacement(input: string): string {
+    // eslint-disable-next-line unicorn/prefer-string-replace-all
     return input.replace(/\$/g, '$$');
   }
 
