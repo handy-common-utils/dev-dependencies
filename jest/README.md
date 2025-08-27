@@ -31,7 +31,7 @@ For new projects, you may want to copy some common configuration files to start 
 Here's the command line for copying those files:
 
 ```
-cp ./node_modules/@handy-common-utils/dev-dependencies-jest/{tsconfig.json,jest.config.*,.eslintrc.yml,.eslintignore,.prettierignore,.prettierrc.js} .
+cp ./node_modules/@handy-common-utils/dev-dependencies-jest/{tsconfig.json,eslint.config.*,.prettierignore,prettier.config.*,jest.config.*} .
 ```
 
 Feel free to modify them to suit your needs.
@@ -45,7 +45,7 @@ If you are developing an NPM package, you may want to add these to your `package
 ```json
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
-  "pretest": "eslint . --ext .ts",
+  "pretest": "eslint .",
   "test": "jest --coverage",
   "compile": "shx rm -rf dist && tsc",
   "prepack": "npm run compile",
@@ -60,7 +60,7 @@ If you are developing a command line tool, you may want to add these instead:
 "main": "dist/index.js",
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
-  "pretest": "eslint . --ext .ts",
+  "pretest": "eslint .",
   "test": "jest --coverage",
   "compile": "shx rm -rf dist && tsc",
   "start": "npm run compile && node dist/index.js"
@@ -75,7 +75,7 @@ If you have command line scripts, you may want to use this line for `prepare`:
 
 #### Prettier in pre commit hook
 
-If you'd like to use prettier in pre commit hook, you can add `husky install` to the `prepare` script in your `package.json`.
+If you'd like to use prettier in pre commit hook, you can add `husky` to the `prepare` script in your `package.json`.
 
 And also these need to be added to `package.json`:
 
@@ -96,9 +96,6 @@ And these two files need to be added to `.husky` directory:
 `pre-commit`:
 
 ```shell
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 npx lint-staged
 ```
 

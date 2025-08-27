@@ -45,7 +45,7 @@ If you are developing an NPM package, you may want to add these to your `package
 ```json
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
-  "pretest": "eslint . --ext .ts",
+  "pretest": "eslint .",
   "test": "nyc mocha",
   "compile": "shx rm -rf dist && tsc",
   "prepack": "npm run compile",
@@ -60,7 +60,7 @@ If you are developing a command line tool, you may want to add these instead:
 "main": "dist/index.js",
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
-  "pretest": "eslint . --ext .ts",
+  "pretest": "eslint .",
   "test": "nyc mocha",
   "compile": "shx rm -rf dist && tsc",
   "start": "npm run compile && node dist/index.js"
@@ -75,7 +75,7 @@ If you have command line scripts, you may want to use this line for `prepare`:
 
 #### Prettier in pre commit hook
 
-If you'd like to use prettier in pre commit hook, you can add `husky install` to the `prepare` script in your `package.json`.
+If you'd like to use prettier in pre commit hook, you can add `husky` to the `prepare` script in your `package.json`.
 
 And also these need to be added to `package.json`:
 
@@ -96,9 +96,6 @@ File `.gitignore`:
 File `pre-commit`:
 
 ```shell
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 npx lint-staged
 ```
 
