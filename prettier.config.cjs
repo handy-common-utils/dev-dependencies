@@ -1,6 +1,6 @@
-const { prettierConfig } = require('eslint-config-sensible-prettier-typescript');
+const { buildPrettierConfig } = require('eslint-config-sensible-prettier-typescript');
 
 module.exports = {
-  ...prettierConfig(),
+  ...buildPrettierConfig(),
   // Override or extend the default config
 };

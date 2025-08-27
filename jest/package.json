@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config test/jest.config.js --runInBand",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore 'jest/test/' 'test/' && replace-in-file .prettierignore 'mocha/test/.*?\\n' ''"
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore 'jest/test/' 'test/' && replace-in-file .prettierignore 'mocha/test/.*?\\n' '' && replace-in-file eslint.config.cjs 'jest/test/' 'test/'"
   },
   "files": [
     "tsconfig.*",

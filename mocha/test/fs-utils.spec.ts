@@ -1,10 +1,10 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import { $, cd, fs, ProcessOutput, within } from 'zx';
+import { $, cd, fs, path, ProcessOutput, within } from 'zx';
 
 async function withinFsUtils<R>(callback: () => R | Promise<R>): Promise<R> {
   return within(async () => {
-    cd('test/fixtures/fs-utils');
+    cd(path.join(__dirname, 'fixtures/fs-utils'));
     return callback();
   });
 }
