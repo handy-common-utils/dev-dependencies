@@ -51,6 +51,7 @@ describe('Test project fs-utils', function () {
           expect(readFileContentAndTimestamp().content).to.include('<!-- This is a test comment -->');
           await $`node ../../../../node_modules/@handy-common-utils/dev-utils/dist/bin/generate-api-docs-and-update-readme.js`;
           const updatedReadme = readFileContentAndTimestamp();
+          // fs.writeFileSync('README-updated.md', updatedReadme.content);
           expect(updatedReadme.content).to.equal(originalReadme.content);
           expect(updatedReadme.timestamp).not.to.equal(originalReadme.timestamp);
         },

@@ -4,7 +4,7 @@
   "description": "File system operations related utilities based on fs-extra",
   "scripts": {
     "pretest": "eslint . --ext .ts",
-    "test": "nyc mocha -r ts-node/register test/**/*spec.ts",
+    "test": "NODE_OPTIONS='--loader ts-node/esm' nyc mocha --no-config -r ts-node/register test/**/*spec.ts",
     "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
     "preversion": "generate-api-docs-and-update-readme && git add README.md"
   },
@@ -23,9 +23,7 @@
   "devDependencies": {
     "@handy-common-utils/dev-dependencies-mocha": "../../..",
     "@types/tmp": "^0.2.0",
-    "mocha": "^10.4.0",
-    "tmp": "^0.2.1",
-    "ts-node": "^10.9.2"
+    "tmp": "^0.2.1"
   },
   "publishConfig": {
     "access": "public"
