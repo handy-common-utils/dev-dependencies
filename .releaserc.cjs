@@ -1,5 +1,5 @@
 module.exports = {
-  meta: false,
+  meta: 'asset',
   tagFormat: 'lerna',
   ghRelease: false,
   changelog: false,
