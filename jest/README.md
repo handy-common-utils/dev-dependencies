@@ -1,21 +1,21 @@
-# @handy-common-utils/dev-dependencies-jest
+# Dev Dependencies with Jest: @handy-common-utils/dev-dependencies-jest
 
-This package contains dependencies that are common, including `jest`.
-It can be used to accelerate the scaffolding of Typescript projects.
+This package provides recommended dev dependencies for projects using [Jest](https://jestjs.io/) as the test runner.
+It can be used to accelerate the scaffolding of TypeScript projects.
 
 [![Version](https://img.shields.io/npm/v/@handy-common-utils/dev-dependencies-jest.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-jest)
 [![Downloads/week](https://img.shields.io/npm/dw/@handy-common-utils/dev-dependencies-jest.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-jest)
 
 If you don't like `jest`, try one of these instead:
 
-- [@handy-common-utils/dev-dependencies-common](../common) - Common dev dependencies without a testing framework.
-- [@handy-common-utils/dev-dependencies-mocha](../mocha) - Common dev dependencies, including @handy-common-utils/dev-dependencies-common, `mocha`, `chai` and `nyc`, etc.
+- [@handy-common-utils/dev-dependencies-common](../common) - Dev dependencies without a testing framework.
+- [@handy-common-utils/dev-dependencies-mocha](../mocha) - Dev dependencies with `Mocha`, `Chai`, and `Istanbul`/`nyc` as the testing framework.
 
-## How start a new project with `@handy-common-utils/dev-dependencies-jest`
+## Getting Started
 
-### 0. Initialise NPM
+### 0. Create the project
 
-This can be done through `npm init`.
+If not yet, you can start a new project using `npm init`.
 
 ### 1. Add as dependency
 
@@ -27,7 +27,7 @@ npm install -D @handy-common-utils/dev-dependencies-jest
 
 ### 2. Copy common configuration files
 
-For new projects, you may want to copy some common configuration files to start with.
+For new projects, you may want to copy these common configuration files to start with.
 Here's the command line for copying those files:
 
 ```
@@ -73,11 +73,11 @@ If you have command line scripts, you may want to use this line for `prepare`:
   "prepare": "npm run compile && shx chmod +x dist/bin/*.js",
 ```
 
-#### Prettier in pre commit hook
+#### Prettier in pre-commit hook
 
-If you'd like to use prettier in pre commit hook, you can add `husky` to the `prepare` script in your `package.json`.
+If you'd like to use Prettier in a pre-commit hook, you can add `husky` to the `prepare` script in your `package.json`.
 
-And also these need to be added to `package.json`:
+Also, these need to be added to `package.json`:
 
 ```json
   "lint-staged": {
@@ -85,7 +85,7 @@ And also these need to be added to `package.json`:
   }
 ```
 
-And these two files need to be added to `.husky` directory:
+And these two files need to be added to the `.husky` directory:
 
 `.gitignore`:
 
@@ -101,5 +101,5 @@ npx lint-staged
 
 ### 4. Start coding!
 
-By default your code goes to `src/`, test cases go to `test/`, and compiled `.js` files go to `dist/`.
+By default, your code goes to `src/`, test cases go to `test/`, and compiled `.js` files go to `dist/`.
 Feel free to change the configurations if this convention does not suit your needs.
