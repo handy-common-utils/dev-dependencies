@@ -16,6 +16,6 @@ jobs:
         with:
           node-version: .nvmrc
       - run: npm ci
-      - run: npx multi-semrel
+      - run: npx zx-bulk-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
