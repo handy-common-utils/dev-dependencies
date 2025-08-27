@@ -8,8 +8,8 @@ It can be used to accelerate the scaffolding of TypeScript projects.
 
 If you don't like `mocha`, try one of these instead:
 
-- [@handy-common-utils/dev-dependencies-common](../common) - Dev dependencies without a testing framework.
-- [@handy-common-utils/dev-dependencies-jest](../jest) - Dev dependencies with `Jest` as the testing framework.
+- [@handy-common-utils/dev-dependencies-jest](https://www.npmjs.com/package/@handy-common-utils/dev-dependencies-jest) - Dev dependencies with `Jest` as the testing framework.
+- [@handy-common-utils/dev-dependencies-common](https://www.npmjs.com/package/@handy-common-utils/dev-dependencies-common) - Dev dependencies without a testing framework.
 
 ## Getting Started
 
