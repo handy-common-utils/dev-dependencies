@@ -1,5 +1,5 @@
 module.exports = {
-  meta: { type: null },
+  meta: false,
   tagFormat: 'lerna',
   ghRelease: false,
   changelog: false,
