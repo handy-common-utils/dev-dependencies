@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config test/jest.config.cjs --runInBand",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore 'mocha/test/.*?\\n' '' && replace-in-files 'jest/test/' 'test/' .prettierignore eslint.config.cjs && replace-in-files 'eslint-config-sensible-prettier-typescript' '@handy-common-utils/dev-dependencies-jest' prettier.config.cjs eslint.config.cjs",
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore . && replace-in-file .prettierignore 'mocha/test/.*?\\n' '' && replace-in-files 'jest/test/' 'test/' .prettierignore eslint.config.cjs && replace-in-files 'eslint-config-sensible-prettier-typescript' '@handy-common-utils/dev-dependencies-jest' prettier.config.cjs eslint.config.cjs && tsc",
     "prepack": "shx rm -rf dist; tsc"
   },
   "files": [
