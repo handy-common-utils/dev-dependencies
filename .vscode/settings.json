@@ -1,4 +1,8 @@
 {
   "editor.tabSize": 2,
-  "cSpell.words": ["ESBK", "mocharc", "nvmrc", "nycrc", "preversion", "qiwi", "readmemd", "rushstack", "semrel"]
+  "cSpell.words": ["ESBK", "mocharc", "nvmrc", "nycrc", "preversion", "qiwi", "readmemd", "rushstack", "semrel"],
+  "eslint.options": {
+    "flags": ["v10_config_lookup_from_file"]
+  },
+  "eslint.useFlatConfig": true
 }
