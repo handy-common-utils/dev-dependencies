@@ -6,7 +6,7 @@ const config = buildESLintConfig({ defaultSourceType: 'commonjs' });
 module.exports = defineConfig([
   // These global ignore patterns are just examples, feel free to remove or modify
   {
-    ignores: ['mocha/test/fixtures/**/*', 'jest/test/fixtures/**/*'],
+    ignores: ['mocha/test/fixtures/**/*', 'jest/test/fixtures/**/*', '*/dist', 'dist'],
   },
   ...config,
   // Add your customizations here
