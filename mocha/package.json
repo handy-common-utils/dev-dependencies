@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "ESBK_TSCONFIG_PATH=test/tsconfig.json npx mocha --no-config --import=tsx test/*.spec.ts",
-    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ../.nycrc.* ../.mocharc.* . && replace-in-file .prettierignore 'jest/test/.*?\\n' '' && replace-in-files 'mocha/test/' 'test/' .prettierignore eslint.config.cjs && replace-in-files 'eslint-config-sensible-prettier-typescript' '@handy-common-utils/dev-dependencies-jest' prettier.config.cjs eslint.config.cjs && tsc",
+    "prepare": "shx cp ../LICENSE ../tsconfig.* ../eslint.config.* ../prettier.config.* ../.prettierignore ../.nycrc.* ../.mocharc.* . && replace-in-file .prettierignore 'jest/test/.*?\\n' '' && replace-in-files 'mocha/test/' 'test/' .prettierignore eslint.config.cjs && replace-in-files 'eslint-config-sensible-prettier-typescript' '@handy-common-utils/dev-dependencies-mocha' prettier.config.cjs eslint.config.cjs && tsc",
     "prepack": "shx rm -rf dist; tsc"
   },
   "files": [

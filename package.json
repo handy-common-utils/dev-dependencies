@@ -11,7 +11,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
-    "zx-bulk-release": "^2.15.31"
+    "zx-bulk-release": "^2.15.39"
   },
   "scripts": {
     "format:all": "prettier --write --ignore-unknown .",
