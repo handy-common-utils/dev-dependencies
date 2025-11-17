@@ -9,7 +9,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
+    "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "zx-bulk-release": "^2.15.39"
   },
