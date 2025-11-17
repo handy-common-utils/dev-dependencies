@@ -90,14 +90,16 @@ export function buildSpecJsConfig(files?: Linter.Config['files'], languageOption
  *
  * @example
  * ```javascript
+ * const { defineConfig } = require('eslint/config');
+ *
  * // Use the complete configuration
- * const config = buildFullConfig();
+ * const config = buildESLintConfig();
  *
  * // Extend with custom rules
- * module.exports = [
- *   ...buildFullConfig(),
+ * module.exports = defineConfig([
+ *   ...config,
  *   { rules: { 'no-console': 'warn' } }
- * ];
+ * ]);
  * ```
  */
 export function buildESLintConfig(options: Parameters<typeof originalBuildESLintConfig>[0]): Linter.Config[] {
