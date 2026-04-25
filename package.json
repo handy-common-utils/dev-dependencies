@@ -14,6 +14,7 @@
     "zx-bulk-release": "^2.15.39"
   },
   "scripts": {
+    "test": "npm -w common test && npm -w mocha test && npm -w jest test",
     "format:all": "prettier --write --ignore-unknown .",
     "prepare": "husky"
   },
