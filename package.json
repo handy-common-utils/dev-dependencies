@@ -9,9 +9,9 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "prettier": "^3.6.2",
-    "zx-bulk-release": "^2.15.39"
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "zx-bulk-release": "^3.2.0"
   },
   "scripts": {
     "test": "npm -w common test && npm -w mocha test && npm -w jest test",
