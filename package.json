@@ -9,11 +9,12 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "prettier": "^3.6.2",
-    "zx-bulk-release": "^2.15.39"
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "zx-bulk-release": "^3.2.0"
   },
   "scripts": {
+    "test": "npm -w common test && npm -w mocha test && npm -w jest test",
     "format:all": "prettier --write --ignore-unknown .",
     "prepare": "husky"
   },
@@ -21,8 +22,8 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@jest/globals": "^30.0.5",
-    "jest": "^30.0.5",
-    "ts-jest": "^29.4.1"
+    "@jest/globals": "^30.3.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9"
   }
 }

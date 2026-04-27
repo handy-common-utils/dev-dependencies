@@ -32,17 +32,17 @@
   },
   "homepage": "https://github.com/handy-common-utils/dev-dependencies/common/tree/master/common#readme",
   "dependencies": {
-    "@handy-common-utils/dev-utils": "^1.8.0",
-    "es-check": "^9.4.5",
-    "eslint": "^9.34.0",
-    "eslint-config-sensible-prettier-typescript": "^1.7.9",
+    "@handy-common-utils/dev-utils": "^1.9.0",
+    "es-check": "^9.6.4",
+    "eslint": "^10.2.1",
+    "eslint-config-sensible-prettier-typescript": "^1.9.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.4.0",
     "npm-run-all": "^4.1.5",
     "shx": "^0.4.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "wait-on": "^9.0.3"
+    "typescript": "^6.0.3",
+    "wait-on": "^9.0.5"
   }
 }
