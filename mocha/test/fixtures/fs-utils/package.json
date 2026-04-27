@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@handy-common-utils/dev-dependencies-mocha": "../../..",
+    "@types/node": "^25.6.0",
     "@types/tmp": "^0.2.0",
     "tmp": "^0.2.1"
   },

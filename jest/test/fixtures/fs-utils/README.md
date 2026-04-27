@@ -99,7 +99,7 @@ There are also several commands you can use directly from your shell/build scrip
 
 ##### addSurroundingInFile()
 
-> `static` **addSurroundingInFile**(`filePath`, `matchPattern`, `addBefore`, `addAfter`, `fileEncoding`): `Promise`\<`void`\>
+> `static` **addSurroundingInFile**(`filePath`, `matchPattern`, `addBefore`, `addAfter`, `fileEncoding?`): `Promise`\<`void`\>
 
 Add surrounding content to the matching sections in the text file.
 
@@ -111,7 +111,7 @@ Add surrounding content to the matching sections in the text file.
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be processed. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `addBefore` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
 | `addAfter` | `string` | `undefined` | the string to be added before the capturing group, no need to escape anything |
-| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `BufferEncoding` \| `undefined` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -125,7 +125,7 @@ Promise of void
 
 ##### changeFileContent()
 
-> `static` **changeFileContent**(`filePath`, `transformContent`, `fileEncoding`): `Promise`\<`void`\>
+> `static` **changeFileContent**(`filePath`, `transformContent`, `fileEncoding?`): `Promise`\<`void`\>
 
 Change the text file content.
 This function loads the full content of the file into memory as string, so that it is not suitable for huge (for example, > 500MB) files.
@@ -137,7 +137,7 @@ If the new content and original content are the same, the file won't be touched.
 | ------ | ------ | ------ | ------ |
 | `filePath` | `string` | `undefined` | path to the file |
 | `transformContent` | (`originalContent`, `filePath`) => `string` \| `PromiseLike`\<`string`\> | `undefined` | function for getting the new file content |
-| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `BufferEncoding` \| `undefined` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -175,7 +175,7 @@ a new string with all '
 
 ##### replaceInFile()
 
-> `static` **replaceInFile**(`filePath`, `matchPattern`, `replacementOrBuilder`, `fileEncoding`): `Promise`\<`void`\>
+> `static` **replaceInFile**(`filePath`, `matchPattern`, `replacementOrBuilder`, `fileEncoding?`): `Promise`\<`void`\>
 
 Replace the matching sections in the text file.
 
@@ -186,7 +186,7 @@ Replace the matching sections in the text file.
 | `filePath` | `string` | `undefined` | path to the file |
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | `undefined` | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
-| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the file |
+| `fileEncoding` | `BufferEncoding` \| `undefined` | `'utf-8'` | encoding of the file |
 
 ###### Returns
 
@@ -236,7 +236,7 @@ The replacing operations on those files happen in parallel.
 | ------ | ------ | ------ |
 | `matchPattern` | `RegExp` | RegExp for deciding which section of the file would be replaced. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `replacementOrBuilder` | [`ReplacementOrBuilder`](#type-aliasesreplacementorbuildermd) | The replacement string or a function for building the replacement string. Please note that you can use special replacement patterns but also you need to take care of the escaping. For details of special replacement patterns see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace |
-| `fileEncoding` | `undefined` \| `BufferEncoding` | encoding of the file, in most of the cases 'utf-8' should be used |
+| `fileEncoding` | `BufferEncoding` \| `undefined` | encoding of the file, in most of the cases 'utf-8' should be used |
 | ...`filePaths` | `string`[] | path to the files |
 
 ###### Returns
@@ -251,7 +251,7 @@ Promise of void
 
 ##### replaceInFileWithFileContent()
 
-> `static` **replaceInFileWithFileContent**(`filePath`, `matchPattern`, `contentFilePath`, `fileEncoding`): `Promise`\<`void`\>
+> `static` **replaceInFileWithFileContent**(`filePath`, `matchPattern`, `contentFilePath`, `fileEncoding?`): `Promise`\<`void`\>
 
 Replace the matching sections in the text file with content from another file.
 
@@ -262,7 +262,7 @@ Replace the matching sections in the text file with content from another file.
 | `filePath` | `string` | `undefined` | path of the file |
 | `matchPattern` | `RegExp` | `undefined` | RegExp for deciding which section of the file would be replaced. You must have a capturing group in the pattern. You may want to use these tricks: `m` flag, `g` flag, `s` flag, `[\s\S]*`, `.*?` |
 | `contentFilePath` | `string` | `undefined` | path of the file for getting the replacement content |
-| `fileEncoding` | `undefined` \| `BufferEncoding` | `'utf-8'` | encoding of the files |
+| `fileEncoding` | `BufferEncoding` \| `undefined` | `'utf-8'` | encoding of the files |
 
 ###### Returns
 
@@ -284,5 +284,5 @@ Promise of void
 
 ### Type Alias: ReplacementOrBuilder
 
-> **ReplacementOrBuilder** = `string` \| (`matchPattern`, `filePath`) => `string` \| `PromiseLike`\<`string`\>
+> **ReplacementOrBuilder** = `string` \| ((`matchPattern`, `filePath`) => `string` \| `PromiseLike`\<`string`\>)
 <!-- API end -->
