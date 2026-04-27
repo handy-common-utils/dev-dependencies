@@ -21,7 +21,7 @@ export function buildTestTsConfig(files?: Linter.Config['files'], languageOption
       globals: {
         ...globals.node,
         ...globals.jest,
-        ...tsConfig.languageOptions?.globals,
+        ...(tsConfig.languageOptions?.globals as object),
       },
     },
     plugins: {
@@ -49,7 +49,7 @@ export function buildTestJsConfig(files?: Linter.Config['files'], languageOption
       globals: {
         ...globals.node,
         ...globals.jest,
-        ...jsConfig.languageOptions?.globals,
+        ...(jsConfig.languageOptions?.globals as object),
       },
     },
     plugins: {

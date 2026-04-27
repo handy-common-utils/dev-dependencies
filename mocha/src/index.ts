@@ -1,8 +1,8 @@
 import type { Linter } from 'eslint';
 
 import { buildJsConfig, buildTsConfig, buildESLintConfig as originalBuildESLintConfig } from 'eslint-config-sensible-prettier-typescript';
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const pluginChaiFriendly = require('eslint-plugin-chai-friendly');
+// @ts-expect-error - no types available for this plugin
+import pluginChaiFriendly from 'eslint-plugin-chai-friendly';
 import globals from 'globals';
 
 export { buildJsConfig, buildPrettierConfig, buildTsConfig, customiseESLintConfig } from 'eslint-config-sensible-prettier-typescript';
@@ -23,7 +23,7 @@ export function buildSpecTsConfig(files?: Linter.Config['files'], languageOption
       globals: {
         ...globals.node,
         ...globals.mocha,
-        ...tsConfig.languageOptions?.globals,
+        ...(tsConfig.languageOptions?.globals as object),
       },
     },
     plugins: {
@@ -55,7 +55,7 @@ export function buildSpecJsConfig(files?: Linter.Config['files'], languageOption
       globals: {
         ...globals.node,
         ...globals.mocha,
-        ...jsConfig.languageOptions?.globals,
+        ...(jsConfig.languageOptions?.globals as object),
       },
     },
     plugins: {

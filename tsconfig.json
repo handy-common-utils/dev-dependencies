@@ -2,14 +2,13 @@
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "baseUrl": "./",
+    "rootDir": "./src",
     "outDir": "dist",
     "sourceMap": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   }
