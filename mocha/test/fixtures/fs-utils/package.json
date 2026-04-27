@@ -4,7 +4,7 @@
   "description": "File system operations related utilities based on fs-extra",
   "scripts": {
     "pretest": "eslint . --ext .ts",
-    "test": "NODE_OPTIONS='--loader ts-node/esm' nyc mocha --no-config -r ts-node/register test/**/*spec.ts",
+    "test": "NODE_OPTIONS='--loader ts-node/esm' c8 mocha --no-config -r ts-node/register test/**/*spec.ts",
     "prepare": "shx rm -rf dist && tsc && shx chmod +x dist/bin/*.js",
     "preversion": "generate-api-docs-and-update-readme && git add README.md"
   },
