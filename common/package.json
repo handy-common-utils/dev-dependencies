@@ -1,7 +1,7 @@
 {
   "name": "@handy-common-utils/dev-dependencies-common",
   "version": "1.8.0",
-  "description": "This package contains dependencies that are common between @handy-common-utils/dev-dependencies-common-jest and @handy-common-utils/dev-dependencies-common-mocha",
+  "description": "This package contains dependencies that are common between @handy-common-utils/dev-dependencies-jest and @handy-common-utils/dev-dependencies-mocha",
   "bin": {},
   "scripts": {
     "test": "eslint .",

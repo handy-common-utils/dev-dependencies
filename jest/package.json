@@ -1,7 +1,7 @@
 {
   "name": "@handy-common-utils/dev-dependencies-jest",
   "version": "1.5.0",
-  "description": "This package contains dependencies that are common, including jest",
+  "description": "Common dev dependencies, including @handy-common-utils/dev-dependencies-common, jest, etc.",
   "bin": {},
   "scripts": {
     "pretest": "eslint .",

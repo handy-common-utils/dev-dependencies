@@ -1,6 +1,6 @@
-# Dev Dependencies with Mocha/Chai/Istanbul/nyc: @handy-common-utils/dev-dependencies-mocha
+# Dev Dependencies with Mocha/Chai/c8: @handy-common-utils/dev-dependencies-mocha
 
-This package provides recommended dev dependencies for projects using [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), and [Istanbul/nyc](https://istanbul.js.org/) as the test runner.
+This package provides recommended dev dependencies for projects using [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), and [c8](https://github.com/bcoe/c8) as the test runner.
 It can be used to accelerate the scaffolding of TypeScript projects.
 
 [![Version](https://img.shields.io/npm/v/@handy-common-utils/dev-dependencies-mocha.svg)](https://npmjs.org/package/@handy-common-utils/dev-dependencies-mocha)
@@ -46,7 +46,7 @@ If you are developing an NPM package, you may want to add these to your `package
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
   "pretest": "eslint .",
-  "test": "nyc mocha",
+  "test": "c8 mocha",
   "compile": "shx rm -rf dist && tsc",
   "prepack": "npm run compile",
   "prepublish": "npm run compile",
@@ -61,7 +61,7 @@ If you are developing a command line tool, you may want to add these instead:
 "scripts": {
   "format:all": "prettier --write --ignore-unknown .",
   "pretest": "eslint .",
-  "test": "nyc mocha",
+  "test": "c8 mocha",
   "compile": "shx rm -rf dist && tsc",
   "start": "npm run compile && node dist/index.js"
 },
