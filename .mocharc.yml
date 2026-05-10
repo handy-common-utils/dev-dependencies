@@ -15,4 +15,4 @@ exclude:
   - '**/node_modules/**'
 require:
   - source-map-support/register
-  - ts-node/register
+  - tsx # or for ESM use node-option: - "import=tsx"
