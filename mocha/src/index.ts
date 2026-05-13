@@ -17,12 +17,15 @@ export function buildSpecTsConfig(files?: Linter.Config['files'], languageOption
   const tsConfig = buildTsConfig(files, languageOptions);
   return {
     ...tsConfig,
-    files: files ?? ['**/*.spec.ts', '**/*.spec.int.ts'],
+    files: files ?? ['**/*.spec.ts', '**/*.spec.int.ts', '**/*.spec.cy.ts'],
     languageOptions: {
       ...tsConfig.languageOptions,
       globals: {
         ...globals.node,
         ...globals.mocha,
+        ...globals.chai,
+        cy: true,
+        Cypress: true,
         ...(tsConfig.languageOptions?.globals as object),
       },
     },
@@ -49,12 +52,15 @@ export function buildSpecJsConfig(files?: Linter.Config['files'], languageOption
   const jsConfig = buildJsConfig(files, languageOptions);
   return {
     ...jsConfig,
-    files: files ?? ['**/*.spec.js', '**/*.spec.int.js'],
+    files: files ?? ['**/*.spec.js', '**/*.spec.int.js', '**/*.spec.cy.js'],
     languageOptions: {
       ...jsConfig.languageOptions,
       globals: {
         ...globals.node,
         ...globals.mocha,
+        ...globals.chai,
+        cy: true,
+        Cypress: true,
         ...(jsConfig.languageOptions?.globals as object),
       },
     },
