@@ -67,10 +67,11 @@ describe('Test project fs-utils', function () {
         async () => {
           try {
             const output = await $`npm test`;
-            expect(output.exitCode).to.equal(1);
+            // Expects 7 errors
+            expect(output.exitCode).to.equal(7);
           } catch (error) {
             const output = error as ProcessOutput;
-            expect(output.exitCode).to.equal(1);
+            expect(output.exitCode).to.equal(7);
           }
         },
       );
